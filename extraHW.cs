@@ -3,7 +3,7 @@
 // Определить угол (в градусах) между положением часовой стрелки в начале суток
 // и в указанный момент времени.
 
-
+/*
 void TimeAngle(int h, int m, int s)
 {
     int hSeconds = h * 3600,
@@ -48,3 +48,28 @@ void AngleTime()
 }
 System.Console.Write("the second task:");
 AngleTime();
+*/
+//Из трехзначного числа x вычли его последнюю цифру. Когда результат разделили на 10, 
+//а к частному слева приписали последнюю цифру числа x, то получилось число n. 
+//Найти число x. Значение n вводится с клавиатуры, 100 ≤ n ≤ 999 
+//и при этом число десятков в n не равно нулю.
+
+int whatAboutX(int n)
+{
+    if (n<109 || n>999)
+    {
+        System.Console.WriteLine("Please try again and input correct number");
+    }
+    else
+    {
+        int a = n % 100;
+        int b = n / 100;
+        int x = a * 10 + b;
+        System.Console.WriteLine($"(n) was {n} and (x) is {x}");
+    }
+    return n;
+}
+
+System.Console.WriteLine("pls, input any number from 110 to 999");
+int n = Convert.ToInt32(Console.ReadLine());
+n = whatAboutX(n);
