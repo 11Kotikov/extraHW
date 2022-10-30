@@ -54,25 +54,25 @@ AngleTime();
 //Найти число x. Значение n вводится с клавиатуры, 100 ≤ n ≤ 999 
 //и при этом число десятков в n не равно нулю.
 
-// int whatAboutX(int n)
-// {
-//     if (n<109 || n>999)
-//     {
-//         System.Console.WriteLine("Please try again and input correct number");
-//     }
-//     else
-//     {
-//         int a = n % 100;
-//         int b = n / 100;
-//         int x = a * 10 + b;
-//         System.Console.WriteLine($"(n) was {n} and (x) is {x}");
-//     }
-//     return n;
-// }
+int whatAboutX(int n)
+{
+    if (n<109 || n>999)
+    {
+        System.Console.WriteLine("Please try again and input correct number");
+    }
+    else
+    {
+        int a = n % 100;
+        int b = n / 100;
+        int x = a * 10 + b;
+        System.Console.WriteLine($"(n) was {n} and (x) is {x}");
+    }
+    return n;
+}
 
-// System.Console.WriteLine("pls, input any (n)umber from 110 to 999 and you will find out (x)");
-// int n = Convert.ToInt32(Console.ReadLine());
-// n = whatAboutX(n);
+System.Console.WriteLine("pls, input any (n)umber from 110 to 999 and you will find out (x)");
+int n = Convert.ToInt32(Console.ReadLine());
+n = whatAboutX(n);
 
 // В трехзначном числе x зачеркнули первую цифру. 
 // Когда полученное число умножили на 10, а произведение сложили с первой цифрой числа x,
@@ -89,7 +89,7 @@ int whatAboutY(int nn)
         int a = nn % 10;
         int b = nn / 10;
         int y = a * 100 + b;
-        System.Console.WriteLine($"(n) was {nn} and (x) is {y}");
+        System.Console.WriteLine($"(n) was {nn} and (y) is {y}");
     }
     return nn;
 }
